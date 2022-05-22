@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div id="title" >Eletromagnetismo</div>
+        </nav>
+
+        <div class="container">
+            
+
+            <div class="jumbotron">
+                <h1 class="display-6">Motor de Corrente Continua!</h1>
+                <p class="lead">Calculos</p>
+                <hr class="my-4">
+            </div>
+                
+            <div class="row">
+                <div class="col-lg-3 col-xl-3 col-md-12 col-sm-12">
+                    <img class="img-fluid" src="images/circuit.jpg">
+                </div>
+
+                <div class="col-lg-3 col-xl-3 col-md-4 col-sm-12">
+                    <label for="voltagem">Fonte de Tensão</label>
+                    <div class="input-group mb-3">
+                        
+                        <input type="number" class="form-control" id="voltagem" placeholder="Volts">
+                        
+                        <div class="input-group-append">
+                            <span class="input-group-text">V</span>
+                        </div>
+                    </div>
+                    
+                    <label for="resistencia_c">Resistências C</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="resistencia_c" placeholder="Ohms">
+
+                        <div class="input-group-append">
+                            <span class="input-group-text">Ω</span>
+                        </div>
+                    </div><br>
+
+                    <label for="resistencia_r">Resistência R</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="resistencia_r" placeholder="Ohms">
+
+                        <div class="input-group-append">
+                            <span class="input-group-text">Ω</span>
+                        </div>
+                    </div><br>
+
+                    <label for="corrente_m">Corrente de entrada no motor</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="corrente_m" placeholder="Amps">
+
+                        <div class="input-group-append">
+                            <span class="input-group-text">A</span>
+                        </div>
+                    </div><br>
+
+                    <button class="btn btn-primary" id="calcular" >Calcular</button>
+                </div>
+                
+                <div class="col-lg-5 col-xl-5 col-md-8 col-sm-12">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Corrente no Rotor
+                            <span class="list-group-item bg-primary rounded">I<sub>r</sub> = <span id="ir"></span>A</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            força eletromotriz (fem - ε)
+                            <span class="list-group-item bg-primary rounded">ε = <span id="fem"></span>V</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Potência dissipada nas bobinas
+                            <span class="list-group-item bg-primary rounded">P<sub>bobinas</sub> = <span id="pdb"></span>W</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Potência dissipada no rotor
+                            <span class="list-group-item bg-primary rounded">P<sub>rotor</sub> = <span id="pdr"></span>W</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Potência de saida
+                            <span class="list-group-item bg-primary rounded">P<sub>saida</sub> = <span id="ps"></span>W</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Eficiencia
+                            <span class="list-group-item bg-primary rounded">E<sub>rotor</sub> = <span id="efc"></span>%</span>
+                        </li>
+                    </ul>
+                </div>
+
+            
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
